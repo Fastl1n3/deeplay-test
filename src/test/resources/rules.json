@@ -1,0 +1,52 @@
+[
+  {
+    "rule": "equals",
+    "property": "ТИП",
+    "value": "ТРАВОЯДНОЕ"
+  },
+
+  {
+    "rule": "and",
+    "subRules": [
+      {
+        "rule": "or",
+        "subRules": [
+          {
+            "rule": "equals",
+            "property": "ТИП",
+            "value": "ТРАВОЯДНОЕ"
+          },
+          {
+            "rule": "equals",
+            "property": "ТИП",
+            "value": "ПЛОТОЯДНОЕ"
+          }
+        ]
+      },
+      {
+        "rule": "equals",
+        "property": "РОСТ",
+        "value": "МАЛЕНЬКОЕ"
+      }
+    ]
+  },
+
+  {
+    "rule": "and",
+    "subRules": [
+      {
+        "rule": "equals",
+        "property": "ТИП",
+        "value": "ВСЕЯДНОЕ"
+      },
+      {
+        "rule": "not",
+        "subRules": {
+          "rule": "equals",
+          "property": "РОСТ",
+          "value": "ВЫСОКОЕ"
+        }
+      }
+    ]
+  }
+]
